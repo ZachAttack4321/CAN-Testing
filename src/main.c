@@ -1,9 +1,8 @@
 //#include <Arduino.h>
 #include <stdio.h>
 #include <util/delay.h>
+#include <avr/io.h>
 
-#define DDRC    (*(volatile uint8_t *)((0x07) + 0x20))
-#define PORTC   (*(volatile uint8_t *)((0x08) + 0x20))
 
 #define LED_PIN (1<<7)
 

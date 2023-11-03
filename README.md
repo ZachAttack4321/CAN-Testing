@@ -2,4 +2,4 @@ Just a dude tryna reinvent the wheel and experiment with CAN protocols for exper
 
 Built using Platformio in Visual Studio Code
 
-Adafruit circuit playground classic library found here: https://github.com/adafruit/Adafruit_CircuitPlayground
+AVR-Libc library found here: https://github.com/avrdudes/avr-libc
