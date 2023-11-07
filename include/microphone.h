@@ -3,9 +3,10 @@
 
 #define MIC_PIN     (1<<1)
 
-void start_microphone();
-void stop_microphone();
-uint16_t get_mic_result();
+void MIC_init();
+void MIC_start();
+void MIC_stop();
+uint16_t MIC_get_value();
 
 
 

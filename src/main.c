@@ -1,31 +1,23 @@
-//#define F_CPU 16000000UL
-#include <stdio.h>
 #include <util/delay.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "microphone.h"
 #include "neopixels.h"
+#include "uart.h"
 
 
 #define LED_PIN             (1<<7)
 
 int main(void) {
-    // setup
+    UART_init(9600);            /* initializes the uart */
     
-    
-    // sets the pin for the LED to output
-    DDRC |= LED_PIN;
-    sei();
-    
+    DDRC |= LED_PIN;            /* sets the led pin to output */
+    sei();                      /* enables interrupts */
 
 
-    // loop
     while(1) {
-        start_microphone();
-        // flips the output pin for the LED
-        PORTC ^= LED_PIN;
+        PORTC ^= LED_PIN;       /* flips the led pin */
         _delay_ms(2000);
         
-        //printf("hello world");
     }
 }
